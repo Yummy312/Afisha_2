@@ -31,7 +31,7 @@ class Movie(models.Model):
             average = sum(review_score)/len(review_score)
             return round(average)
         else:
-            return get_stars
+            return ''
 
 
 class Review(models.Model):
