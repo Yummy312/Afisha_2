@@ -60,3 +60,9 @@ def detail_review(request, id):
     data = ReviewSerializer(review).data
     return Response(data=data)
 
+
+@api_view(['GET'])
+def show_movies_reviews(request):
+    movies = Movie.objects.all()
+    data = MovieSerializer(movies, many=True).data
+    return Response(data=data)
