@@ -48,5 +48,14 @@ class Review(models.Model):
     def __str__(self):
         return str(self.movie)
 
+    @property
+    def movie_title(self):
+        return str(self.movie)
+
+    @property
+    def movie_id(self):
+        return self.movie_id
+
+
 
 
